@@ -1,0 +1,22 @@
+import greenfoot.*;
+
+
+public class keypad_safe extends gui
+{
+    private static final int x = 993;
+    private static final int y = 90;
+    getWorld().addObject(new exit(), x, y);
+    public keypad_safe() {
+    }
+    public void act() 
+    {
+    }    
+    public int position_x()
+    {
+    return x;    
+    }
+    public int position_y()
+    {
+    return y;  
+    }
+}

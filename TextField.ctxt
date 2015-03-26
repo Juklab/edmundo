@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=
+comment0.target=TextField()
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ UpdateScroll()
+comment3.params=newText
+comment3.target=void\ setText(java.lang.String[])
+comment4.params=
+comment4.target=java.lang.String[]\ getText()
+comment5.params=
+comment5.target=void\ checkInput()
+comment6.params=Str
+comment6.target=java.lang.String\ removeLastLetter(java.lang.String)
+comment7.params=Arr
+comment7.target=java.lang.String[]\ removeLast(java.lang.String[])
+comment8.params=Arr\ ToAdd
+comment8.target=java.lang.String[]\ addToArray(java.lang.String[],\ java.lang.String)
+comment9.params=
+comment9.target=void\ UpdateImage()
+numComments=10

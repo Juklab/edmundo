@@ -1,0 +1,9 @@
+import greenfoot.*;
+public class sfx_bar extends volume
+{
+
+    public void act() 
+    {
+        // Add your action code here.
+    }    
+}

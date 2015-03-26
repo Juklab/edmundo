@@ -1,0 +1,21 @@
+import greenfoot.*;
+public class load extends mainmenu 
+{
+GreenfootSound SFX = new GreenfootSound("sfx/button_hover.mp3");
+public load()
+    {
+    Greenfoot.setWorld(new nosave());
+    removeObjects(getObjects(null));
+    addObject(new exit(), 1080, 22);
+    MouseCursor.setImage(); 
+    }
+    public void act()
+    {
+    //addObject(new exit(), 7 , 2);      
+    if(Greenfoot.isKeyDown("escape")) {
+       SFX.play();
+       removeObjects(getObjects(null));
+       Greenfoot.setWorld(new mainmenu());
+    }
+}
+}

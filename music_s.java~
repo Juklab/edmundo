@@ -1,0 +1,39 @@
+import greenfoot.*;
+public class music_s extends gui
+{
+    private static GreenfootSound BGM = new GreenfootSound("bg/mm.mp3");   
+    private boolean mouseOver = false;
+    private boolean BGMmute = false;
+    GreenfootSound SFX = new GreenfootSound("sfx/button_hover.mp3");
+    public volume()
+    {
+    }
+    public void setImageON()
+    {
+        getWorld().addObject(new ON(), 780, 177);
+        getWorld().removeObject(this);
+    }
+    public void setImageOFF()
+    {
+        getWorld().addObject(new OFF(), 780, 177);
+        getWorld().removeObject(this);
+    }
+    public static void startBGM(){
+        BGM.play(); 
+    }
+    public static void stopBGM(){
+        BGM.stop();
+    } 
+    public boolean checkBGM() {
+    if(BGM.isPlaying()){
+        BGMmute = false;
+    }
+    else {
+        BGMmute = true;
+    }
+    return BGMmute;
+    }
+    
+    
+    
+}

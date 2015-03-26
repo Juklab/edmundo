@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=correctInput\ nextWorld
+comment0.target=pass(java.lang.String,\ greenfoot.World)
+comment0.text=\r\n\ This\ constructor\ can\ be\ used\ to\ prevent\ any\ further\ action\ unless\ the\ password\ is\ entered\ correctly\r\n\r\n\ @param\ correctInput\:\ the\ password\ that\ must\ be\ entered\ correctly\r\n\ @param\ nextWorld\:\ the\ world\ to\ proceed\ to\ when\ password\ is\ entered\ correctly\r\n
+comment1.params=correctInput\ descriptor\ nextWorld
+comment1.target=pass(java.lang.String,\ java.lang.String,\ greenfoot.World)
+comment1.text=\r\n\ This\ constructor\ can\ be\ used\ to\ prevent\ any\ further\ action\ unless\ the\ password\ is\ entered\ correctly\ and\ will\r\n\ display\ a\ custom\ text\ message.\r\n\r\n\ @param\ correctInput\:\ the\ password\ that\ must\ be\ entered\ correctly\r\n\ @param\ descriptor\:\ a\ text\ message\ that\ is\ displayed\ on\ the\ security\ screen\r\n\ @param\ nextWorld\:\ the\ world\ to\ proceed\ to\ when\ password\ is\ entered\ correctly\r\n
+comment2.params=correctInput\ nextWorld\ prevWorld
+comment2.target=pass(java.lang.String,\ greenfoot.World,\ greenfoot.World)
+comment2.text=\r\n\ This\ constructor\ can\ be\ used\ to\ prevent\ any\ further\ action;\ or,\r\n\ it\ can\ be\ used\ to\ only\ proceed\ to\ one\ world\ when\ the\ password\ entered\ is\ correct,\ else\ it\ proceeds\r\n\ to\ another\ world.\r\n\r\n\ @param\ correctInput\ A\ parameter\r\n\ @param\ nextWorld\ A\ parameter\r\n\ @param\ prevWorld\ A\ parameter\r\n
+comment3.params=correctInput\ descriptor\ nextWorld\ prevWorld
+comment3.target=pass(java.lang.String,\ java.lang.String,\ greenfoot.World,\ greenfoot.World)
+comment3.text=\r\n\ This\ constructor\ can\ be\ used\ to\ prevent\ any\ further\ action;\ or,\r\n\ it\ can\ be\ used\ to\ only\ proceed\ to\ one\ world\ when\ the\ password\ entered\ is\ correct,\ else\ it\ proceeds\r\n\ to\ another\ world.\ \ It\ will\ also\ display\ a\ custom\ text\ message.\r\n\r\n\ @param\ correctInput\ A\ parameter\r\n\ @param\ descriptor\:\ a\ text\ message\ that\ is\ displayed\ on\ the\ security\ screen\r\n\ @param\ prevWorld\ A\ parameter\r\n
+comment4.params=
+comment4.target=void\ started()
+comment4.text=\r\n\ This\ method\ allows\ user\ three\ more\ attemps\ after\ restarting\ the\ scenario.<br>\r\n\ <br>\r\n\ NOTE\:\ this\ method\ is\ called\ by\ the\ system\ when\ the\ scenario\ is\ re-started.\r\n
+comment5.params=
+comment5.target=void\ updateBackground()
+comment6.params=
+comment6.target=void\ act()
+comment7.params=len
+comment7.target=void\ setMaximumLength(int)
+numComments=8

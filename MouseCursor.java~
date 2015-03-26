@@ -1,0 +1,22 @@
+import greenfoot.*;
+import greenfoot.core.WorldHandler;
+import javax.swing.JPanel;
+import java.awt.Cursor;
+import java.awt.Point;
+import java.awt.Toolkit;
+
+public abstract class MouseCursor
+{
+    private static GreenfootImage CursorImage=new GreenfootImage("cursors/arrow.png");
+    private static Point MousePoint=new Point(0,0);
+    private static JPanel Panel = WorldHandler.getInstance().getWorldCanvas();
+    private static Cursor cursor;
+    private static Toolkit Tk = Toolkit.getDefaultToolkit();
+
+    /** set the Mouse Image (the given Image will be scaled to 32, 32.) */
+    public static void setImage()
+    {
+         Panel.setCursor(Tk.createCustomCursor(CursorImage.getAwtImage(),MousePoint,"Somehow"));
+    }
+}
+

@@ -1,0 +1,16 @@
+import greenfoot.*;
+public class control extends gui
+{
+    private boolean mouseOver = false;
+    GreenfootSound SFX = new GreenfootSound("sfx/button_hover.mp3");
+    GreenfootSound SFX2 = new GreenfootSound("sfx/button_click.mp3");
+    public void act()
+    {
+       setLocation(550, 275);
+        if(Greenfoot.isKeyDown("escape")) 
+        {
+        SFX.play();
+        getWorld().removeObject(this);
+       }
+    }   
+}

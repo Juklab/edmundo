@@ -1,0 +1,8 @@
+import greenfoot.*;
+public class nosave extends load
+{
+    public nosave()
+    {
+    setBackground(new GreenfootImage("gui/load/no_save.png"));
+    }
+}

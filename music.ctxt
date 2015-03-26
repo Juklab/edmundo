@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ setImageON()
+comment1.params=
+comment1.target=void\ setImageOFF()
+comment2.params=
+comment2.target=void\ startBGM()
+comment3.params=
+comment3.target=void\ stopBGM()
+comment4.params=a
+comment4.target=void\ setVolumeBGM(int)
+comment5.params=
+comment5.target=int\ getVolumeBGM()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment7.params=
+comment7.target=boolean\ BGMstatus()
+comment8.params=
+comment8.target=boolean\ BGMisPlaying()
+comment9.params=
+comment9.target=java.lang.String\ BGMname()
+numComments=10

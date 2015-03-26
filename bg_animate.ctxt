@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ act()
+comment1.params=time
+comment1.target=void\ timeter(int)
+comment2.params=timedelay\ smooth\ endSize\ picture
+comment2.target=void\ increaseSize(int,\ int,\ int,\ java.lang.String[])
+comment3.params=delay
+comment3.target=void\ fadeInImage(int)
+comment4.params=timedelay\ smooth
+comment4.target=void\ fadeOutImage(int,\ int)
+comment5.params=timedelay\ smooth\ picture
+comment5.target=void\ imageChange(int,\ int,\ java.lang.String[])
+numComments=6

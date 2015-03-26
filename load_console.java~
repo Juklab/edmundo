@@ -1,0 +1,26 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+public class load_console extends Actor
+    {
+    private GreenfootImage bg  = new GreenfootImage("gui/console/loading.png");
+    int i = 0;
+    public void act() 
+    {
+     changeImage();
+     brake();
+     i=1;
+    } 
+    private void changeImage()
+    {    
+        if (i<1) 
+        {
+         setImage(bg);
+         i=i+1;   
+         WaitCursorWhite.setImage();
+        }
+    }
+      public void brake()
+    {
+        Greenfoot.delay(1000);
+    }
+    
+}
