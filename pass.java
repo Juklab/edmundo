@@ -5,8 +5,8 @@ public class pass extends World
 {
     private static int MAX_WORD_LEN = 4;
     private World passWorld, failWorld;
-    private String description = "", answer, input="";
-    private int attempts = 5;
+    private String description = "", answer, input= "";
+    private int attempts = 3;
     GreenfootSound SFX_pass = new GreenfootSound("sfx/beep.mp3");
     GreenfootSound SFX_notpass = new GreenfootSound("sfx/denied.mp3");
     GreenfootSound SFX_siren = new GreenfootSound("sfx/siren.mp3");
@@ -80,7 +80,7 @@ public class pass extends World
      */
     public void started()
     {
-        attempts = 5;
+        attempts = 3;
     }
 
     private void updateBackground()
@@ -106,8 +106,8 @@ public class pass extends World
         String key = Greenfoot.getKey();
         if (key == null) return;
         boolean update = false;
-        if(key !=null) {
-            if (Greenfoot.isKeyDown(key))
+   
+        if (Greenfoot.isKeyDown(key))
            {
             SFX_press.play(); 
            }
@@ -132,9 +132,9 @@ public class pass extends World
                             addObject(new failed(),getWidth()/2, getHeight()/2);
                             failedSFX.play();
                         }  
-                        /*else { Greenfoot.setWorld(new Laboratory()); }*/
-                       // return;
-                    }
+                        else { Greenfoot.setWorld(new Laboratory()); }
+                        return;
+                    }  
                 }
                 else  // if passed !!
                 {
@@ -149,9 +149,8 @@ public class pass extends World
                     if (passWorld != null) { addObject(new inside_safe(),550,275); }
                     return;
                 }
-          key = "escape";
          }
-        }
+        
         if ("escape".equals(key))
             {
                Greenfoot.setWorld(new Laboratory());
@@ -172,8 +171,6 @@ public class pass extends World
                 updateBackground(); 
             }
         }
-    
-
     public static void setMaximumLength(int len)
     {
         MAX_WORD_LEN = len;

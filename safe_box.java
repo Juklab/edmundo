@@ -25,8 +25,7 @@ public class safe_box extends object
          }   
        if (Greenfoot.mouseClicked(this))  
        {  
-             //String code = n.getcode();
-             Greenfoot.setWorld(new pass("3972", "Safe is locked, insert the passcode to deactivated security system.", getWorld()));  
+           Greenfoot.setWorld(new pass("3972", "Safe is locked, insert the passcode to deactivated security system.", getWorld()));
        } 
     }   
 }
