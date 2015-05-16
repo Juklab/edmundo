@@ -1,51 +1,44 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Office extends SWorld
 {
-    private boolean paused;
     GreenfootSound SFX = new GreenfootSound("sfx/button_click.mp3");
+    GreenfootImage of = new GreenfootImage("bg/office.png");
+    private static GreenfootSound BGF = new GreenfootSound("bg/drama.mp3");
+    private static boolean isPlay;
     public Office()
     {    
-        super(2800, 550, 1, 2800);
-        GreenfootImage of = new GreenfootImage("bg/office.png");
+        super(1100, 550, 1, 2800);
+        addMainActor(new player(), 696, 342, 450, 450);
         setScrollingBackground(of);
-        setBackground(new GreenfootImage("bg/office.png"));
-        //addMainActor(new player(), 200, 400, 250, 300); 
-        //addObject(new tv(),200,100);
-        addObject(new labtop(),1104, 272);
-        addObject(new lift(),456, 300);
-        addObject(new Lab(),2602, 293);
-        //sound = new sound();
+        MouseCursor.setImage(); 
         prepare();
+        setPaintOrder(control.class,intro.class,save.class,out.class,resume.class,menu.class,help.class,option.class,pause.class,failed.class, exit_white.class,exit.class,generator_map.class, lab_map.class,freezer_map.class,office_map.class,mainframe_map.class,lobby_map.class,map.class, note_show.class,desktop.class, paper_show.class,player.class, paper.class, safe_box.class, lift.class,door.class, wood_frame1.class, labtop.class); 
+        if(Mansion.BGOisPlaying() || Mainframe.BGSisPlaying()) { 
+            Mansion.stopBGO();
+            Mainframe.stopBGS();
+            BGF.playLoop();
+        }
     }
-    
-    public void act() {
-        if(Greenfoot.isKeyDown("escape")) 
-    {
-        SFX.play();
-        paused = true;
-        //removeObjects(getObjects(null));
-        pausemenu();
-    }
-    }
-    
-    private void pausemenu() {
-        removeObjects(getObjects(null));
-        addObject(new pause(), 550,275);
-        addObject(new resume(), 585, 118);
-        addObject(new save(), 585, 180);
-        addObject(new menu(), 585, 244);
-        addObject(new option(), 585, 308);
-        addObject(new help(), 585, 367);
-        addObject(new out(), 585, 434);
-    }
-    
     private void prepare()
     {
-        addObject(new floor(), 500, 550);
-        addObject(new floor(), 1500, 550);
-        addObject(new floor(), 2500, 550);
-        addObject(new wall(), 30, 310);
-        addObject(new wall(), 2425, 310);
+        addObject(new labtop(),1102, 271);
+        addObject(new lift(),456, 288);
+        addObject(new lift(),2567, 288);
+        addObject(new paper(),1460, 482);
+        addObject(new note(), 754, 475);
+        addObject(new floor(), 10, 620);
+        addObject(new floor(), 500, 620);
+        addObject(new floor(), 1500, 620);
+        addObject(new floor(), 2500, 620);
     }
-   
+
+    public static boolean BGFisPlaying() {
+        if(BGF.isPlaying()) {isPlay = true;}
+        if(!BGF.isPlaying()) {isPlay = false;}
+        return isPlay;
+    }   
+    public static void stopBGF() {
+       BGF.stop();
+       isPlay = false;
+    }
 }

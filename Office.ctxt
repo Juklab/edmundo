@@ -2,9 +2,9 @@
 comment0.params=
 comment0.target=Office()
 comment1.params=
-comment1.target=void\ act()
+comment1.target=void\ prepare()
 comment2.params=
-comment2.target=void\ pausemenu()
+comment2.target=boolean\ BGFisPlaying()
 comment3.params=
-comment3.target=void\ prepare()
+comment3.target=void\ stopBGF()
 numComments=4

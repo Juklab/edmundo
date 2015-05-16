@@ -1,19 +1,15 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
-/**
- * Write a description of class map here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class map extends control_panel
+public class map extends gui
 {
-    /**
-     * Act - do whatever the map wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
+    public void act() {
+    setLocation(550, 275);
+    pause p = new pause();
+    if(Greenfoot.isKeyDown("escape")) 
     {
-        // Add your action code here.
-    }    
+    //getWorld().removeObject(this);
+    getWorld().removeObjects(getWorld().getObjects(map.class));
+    p.setPaused(false);
+    }
+    }
 }

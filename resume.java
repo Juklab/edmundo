@@ -7,7 +7,8 @@ public class resume extends pause
     public void act()
     {
        setLocation(585, 118);
-       MouseInfo mouse = Greenfoot.getMouseInfo();    
+       MouseInfo mouse = Greenfoot.getMouseInfo();
+       pause p = new pause();
        if (!mouseOver && Greenfoot.mouseMoved(this))  
         {  
             SFX.play();
@@ -24,10 +25,8 @@ public class resume extends pause
        if (Greenfoot.mouseClicked(this))  
         {  
             SFX2.play();
-            Lobby lob = (Lobby) getWorld();
-            lob.setPaused(false);
-            //getWorld().removeObject(this);
             getWorld().removeObjects(getWorld().getObjects(pause.class));
+            p.setPaused(false);
         }   
     }     
 }

@@ -5,10 +5,10 @@ public class safe_box extends object
 {
     boolean mouseOver = false;
     GreenfootSound SafeBoxSFX = new GreenfootSound("sfx/safe_box_hover.mp3"); 
-    Lobby lob = new Lobby();
+    Mansion man = new Mansion();
+    note n = new note();
     public void act()
     {
-       setLocation(810, 355);
        MouseInfo mouse = Greenfoot.getMouseInfo();    
        if (!mouseOver && Greenfoot.mouseMoved(this))  
         {  
@@ -25,11 +25,9 @@ public class safe_box extends object
          }   
        if (Greenfoot.mouseClicked(this))  
        {  
-             //pass o = (pass) getWorld();
-             //new pass("1181", "Safe is Loacked", this); 
-             Greenfoot.setWorld(new pass("1181", "Safe is locked, insert the passcode to deactivated security system.", getWorld()));  
+             //String code = n.getcode();
+             Greenfoot.setWorld(new pass("3972", "Safe is locked, insert the passcode to deactivated security system.", getWorld()));  
        } 
-
     }   
 }
 

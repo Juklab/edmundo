@@ -24,7 +24,7 @@ public class out extends pause
        if (Greenfoot.mouseClicked(this))  
         {  
             SFX2.play();
-            getWorld().removeObjects((null)); 
+            getWorld().removeObjects(getWorld().getObjects(null)); 
             Greenfoot.stop();
         }   
     }    

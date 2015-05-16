@@ -11,11 +11,13 @@ public class welcome extends World
     public void act()
     {
         if(Greenfoot.isKeyDown("enter")) {
+            //m.setSong("bg.mp3");
             m.startBGM();
             m.setVolumeBGM(100);
             Greenfoot.setWorld(new mainmenu()); 
         }
         if(Greenfoot.isKeyDown("escape")) {
+            removeObjects(getObjects(null));
             Greenfoot.stop();
         }
     }

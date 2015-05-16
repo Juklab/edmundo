@@ -3,10 +3,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class labtop extends object
 {
     boolean mouseOver = false;
-    GreenfootSound SFX = new GreenfootSound("sfx/button_hover.mp3"); 
+    GreenfootSound SFX = new GreenfootSound("sfx/typing.mp3"); 
     public void act()
     {
-       setLocation(1104, 272);
        MouseInfo mouse = Greenfoot.getMouseInfo();    
        if (!mouseOver && Greenfoot.mouseMoved(this))  
         {  
@@ -23,7 +22,7 @@ public class labtop extends object
          } 
        if (Greenfoot.mouseClicked(this))  
         {  
-         Greenfoot.setWorld(new Office());
+            getWorld().addObject(new desktop(), 550,275);
         }   
     }   
 }

@@ -1,19 +1,30 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class inventory here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class inventory extends control_panel
+public class inventory extends gui
 {
-    /**
-     * Act - do whatever the inventory wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
+    private boolean mouseOver = false;
+    GreenfootSound SFX = new GreenfootSound("sfx/button_hover.mp3");
+    GreenfootSound SFX2 = new GreenfootSound("sfx/button_click.mp3");
+    public void act()
     {
-        // Add your action code here.
-    }    
+       MouseInfo mouse = Greenfoot.getMouseInfo();    
+       if (!mouseOver && Greenfoot.mouseMoved(this))  
+        {  
+            SFX.play();
+            setImage("gui/console/inventory_hover.png");  
+            mouseOver = true;  
+            HandCursorWhite.setImage(); 
+         }  
+       if (mouseOver && Greenfoot.mouseMoved(null) && ! Greenfoot.mouseMoved(this))  
+         {  
+             setImage("gui/console/inventory.png");  
+             mouseOver = false;  
+             MouseCursorWhite.setImage(); 
+         } 
+       if (Greenfoot.mouseClicked(this))  
+        {  
+         SFX2.play();
+
+        }
+    }  
 }

@@ -12,7 +12,7 @@ public class music_bar extends bar
     // this one determines the length of the delay
     private int delay = 0;
     // this one holds the 'direction' of the change (increasing = 1, decreasing = -1)
-    private int changeValue = 0;
+    private int changeValue = 100;
     // the following fields hold alternate colors for while mouse hovers over the bar
     private Color altSafeColor = new Color(232, 23, 93, 255);
     private Color altTextColor = new Color(232, 23, 93, 255);
@@ -21,28 +21,13 @@ public class music_bar extends bar
     private boolean mouseOn = false;
     GreenfootSound SFX = new GreenfootSound("sfx/button_hover.mp3");
     GreenfootSound SFX2 = new GreenfootSound("sfx/button_click.mp3");
-    /**
-     * Constructor:
-     * calls the super-class 'volume' constructor with the same parameters
-     * @param ref A parameter to be used as the title for the bar
-     * @param units A parameter to be used as the unit of measure text (displayed after the value text)
-     * @param val A parameter to set the initial value of the bar 
-     * @param max A parameter to set the maximum value of the bar
-     */
+
     public music_bar(String ref, String units, int val, int max)
     {
         super(ref, units, val, max);
     }
     
-    /**
-     * Method act:
-     * allows the user to perform mouse presses and clicks on (and beside) the bar to change its value.
-     * The following four places can be clicked at:
-     *  1) Outside, to left of color bar: minimizes value, and begins incrementing if mouse press held
-     *  2) Outside, to right of color bar: maximizes value, and begins decrementing if mouse press held
-     *  3) Inside, on left side of color bar: decrements value, and decrements more if mouse press held
-     *  4) Inside, on right side of color bar: increments value, and increments more if mouse press held
-     */
+
     public void act()
     {
         // check mouse hovering
@@ -109,46 +94,22 @@ public class music_bar extends bar
         }
     }
     
-    /**
-     * Method 'setAltSafeColor': sets a new mouse hovering safe color
-     *
-     * @param 'color': the new color to use as safeColor when mouse hovers over the bar
-     */
+
     public void setAltSafeColor(Color color) { altSafeColor = color; }
     
-    /**
-     * Method 'getAltSafeColor': gets the current mouse hovering safe color
-     *
-     * @return: the current mouse hovering safe color
-     */
+ 
     public Color getAltSafeColor() { return altSafeColor; }
     
-    /**
-     * Method 'setAltDangerColor': sets a new mouse hovering danger color
-     *
-     * @param 'color': the new color to use as dangerColor when mouse hovers over the bar
-     */
+
     public void setAltDangerColor(Color color) { altDangerColor = color; }
     
-    /**
-     * Method 'getAltDangerColor': gets the current mouse hovering danger color
-     *
-     * @return: the current mouse hovering danger color
-     */
+  
     public Color getAltDangerColor() { return altDangerColor; }
 
-    /**
-     * Method setAltTextColor': sets a new mouse hovering text color
-     *
-     * @param 'color': the new color to use as textColor when mouse hovers over the bar
-     */
+
     public void setAltTextColor(Color color) { altTextColor = color; }
     
-    /**
-     * Method 'getAltTextColor': gets the current mouse hovering text color
-     *
-     * @return: the current mouse hovering text color
-     */
+
     public Color getAltTextColor() { return altTextColor; }
     
     /**
@@ -164,10 +125,5 @@ public class music_bar extends bar
         return true;
     }
     
-    /**
-     * Method 'setDelay': sets a new time delay between value changes while mouse button is held down
-     *
-     * @param 'newDelay': the new number of cycles between value changes while mouse button is held down
-     */
     public void setDelay(int newDelay) { if (newDelay > 0) delay = newDelay; }
 }

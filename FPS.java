@@ -1,20 +1,13 @@
 import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
 import java.awt.Color;
 import java.awt.Graphics;
-/**
-* Displays the number of frames per second on 
-* a given scenario.
-* 
-* @author Michael Berry (mjrb4)
-* @version 06/07/08
-*/
 public class FPS extends Actor
 {
 public enum Mode {AVERAGE, REALTIME}
 public static final Mode mode = Mode.AVERAGE;
-private static final Color textColor = Color.red;
+private static final Color textColor = Color.white;
 private static final String prefix = "FPS: ";
-private static final int updateFreq = 20;
+private static final int updateFreq = 30;
 private static boolean status;
 private long countAct;
 private long prevTime;

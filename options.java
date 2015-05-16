@@ -1,4 +1,5 @@
 import greenfoot.*;
+import greenfoot.World;
 import java.awt.Color;
 import java.io.*;
 import java.util.*;
@@ -8,7 +9,6 @@ public class options extends mainmenu
     GreenfootSound SFX2 = new GreenfootSound("sfx/button_click.mp3");
     music_bar BGMbar = new music_bar("Volume", "%", BGMvolume, 100); // default
     fps_box fpsbox = new fps_box("Switch", FPSstatus); // default
-    //full_box fullbox = new full_box("Switch", false); // default FULLstatus
     private static int BGMvolume; // static variable to store volume status
     private static boolean FULLstatus;  // static variable to store Full screen status
     private static boolean FPSstatus; // static variable to store FPS status
@@ -16,6 +16,7 @@ public class options extends mainmenu
     // call actor
     music m = new music();
     FPS f = new FPS();
+
     public options()
     {
         setBackground(new GreenfootImage("gui/options/options.png"));
@@ -30,9 +31,7 @@ public class options extends mainmenu
         CheckFPSstatus();
         CheckBGMvolume();
         BGM_speaker();
-        //LoadOptions();
     }   
-
     public void act()
     {    
         if(Greenfoot.isKeyDown("escape")) 
@@ -88,10 +87,12 @@ public class options extends mainmenu
     {
         if(m.BGMisPlaying()) {
             addObject(new ON(), 585, 165);
+            removeObjects(getObjects(OFF.class)); 
             BGMIsPlay = true;
         }    
         else if(!m.BGMisPlaying()){
             addObject(new OFF(), 585, 165);
+            removeObjects(getObjects(ON.class)); 
             BGMIsPlay = false;
         }
     }
@@ -119,7 +120,7 @@ public class options extends mainmenu
         music_bar BGMbar = new music_bar("Volume", "%", BGMvolume, 100);
         removeObjects(getObjects(music_bar.class));  
         addObject(BGMbar, 395, 165);
-        //BGMvolume = BGMbar.getValue();
+        BGMvolume = BGMbar.getValue();
     }
 
     private static void FPSenabled() { // stored static tick value and status

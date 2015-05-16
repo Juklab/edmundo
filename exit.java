@@ -30,7 +30,7 @@ public class exit extends gui
         }  
        if (Greenfoot.mouseClicked(this) && opt.checkfromGame())  
        {  
-           getWorld().removeObjects(getWorld().getObjects(options.class));
+           getWorld().removeObjects(getWorld().getObjects(null));
        }   
     }   
 }

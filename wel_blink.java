@@ -59,7 +59,5 @@ public void animate(boolean loop,int timedelay,String[] picture){
                 getWorld().removeObject(this);
             }
         }
-    }
-    
-    
+    }  
 }

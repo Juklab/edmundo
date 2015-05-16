@@ -24,9 +24,9 @@ public class help extends pause
        if (Greenfoot.mouseClicked(this))  
         {  
             SFX2.play();
-            getWorld().addObject(new control(), 550, 275);
+            getWorld().addObject(new intro(), 550, 275);
             getWorld().addObject(new exit(), 1080, 22);
-            //getWorld().removeObjects((null)); 
+            getWorld().removeObjects(getWorld().getObjects(pause.class));
         }   
     }  
 }

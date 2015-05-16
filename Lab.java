@@ -23,7 +23,7 @@ public class Lab extends object
          } 
        if (Greenfoot.mouseClicked(this))  
         {  
-         Greenfoot.setWorld(new Labo());
+         Greenfoot.setWorld(new Laboratory());
         }   
     }   
 }

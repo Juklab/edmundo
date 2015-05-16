@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Mansion()
+comment0.text=\r\n\ Creates\ a\ scrolling\ world\ using\ a\ main\ actor,\ a\ background,\ some\ obstacles,\ and\ a\ non-scrolling\ score.\r\n
+comment1.params=
+comment1.target=void\ prepare()
+comment2.params=
+comment2.target=boolean\ BGOisPlaying()
+comment3.params=
+comment3.target=void\ stopBGO()
+numComments=4

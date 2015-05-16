@@ -5,12 +5,14 @@ public class pass extends World
 {
     private static int MAX_WORD_LEN = 4;
     private World passWorld, failWorld;
-    private String description = "", answer, input = "";
+    private String description = "", answer, input="";
     private int attempts = 5;
     GreenfootSound SFX_pass = new GreenfootSound("sfx/beep.mp3");
     GreenfootSound SFX_notpass = new GreenfootSound("sfx/denied.mp3");
     GreenfootSound SFX_siren = new GreenfootSound("sfx/siren.mp3");
     GreenfootSound SFX_press = new GreenfootSound("sfx/boop.mp3");
+    GreenfootSound failedSFX = new GreenfootSound("sfx/failed.mp3");
+    GreenfootSound unlockSFX = new GreenfootSound("sfx/safe_unlock.mp3");
     /**
      * This constructor can be used to prevent any further action unless the password is entered correctly
      *
@@ -102,15 +104,14 @@ public class pass extends World
     public void act()
     {
         String key = Greenfoot.getKey();
-        boolean update = false;
         if (key == null) return;
-        if (key != null)
-        {
-        if (Greenfoot.isKeyDown(key))
-        {
+        boolean update = false;
+        if(key !=null) {
+            if (Greenfoot.isKeyDown(key))
+           {
             SFX_press.play(); 
-        }
-        if ("enter".equals(key))
+           }
+         if ("enter".equals(key))
             {
                 if (!answer.equals(input))
                 {
@@ -119,37 +120,41 @@ public class pass extends World
                     getBackground().drawImage(text, (getWidth()-text.getWidth())/2, 350);
                     Greenfoot.delay(50);
                     attempts--;
+                    input = input.substring(0, input.length()-4);
+                    update = true;
                     if (attempts == 0) // try more than 3
                     {
-                        if (failWorld == null) {
-                            Greenfoot.setWorld(new failed()); 
+                        if (failWorld == null && getObjects(failed.class).isEmpty()) {
                             SFX_siren.playLoop();
-                            Greenfoot.delay(1000);
+                            Greenfoot.delay(500);
                             // game over screen
-                            Greenfoot.setWorld(new Lobby()); 
-                        }
-                        return;
+                            SFX_siren.stop();
+                            addObject(new failed(),getWidth()/2, getHeight()/2);
+                            failedSFX.play();
+                        }  
+                        /*else { Greenfoot.setWorld(new Laboratory()); }*/
+                       // return;
                     }
                 }
-                else // if passed !!
+                else  // if passed !!
                 {
                     SFX_pass.play(); 
                     GreenfootImage text = new GreenfootImage("Access Granted", 36, new Color(0, 128, 0), null);
                     getBackground().drawImage(text, (getWidth()-text.getWidth())/2, 350);
-                    Greenfoot.delay(50);
-                    if (passWorld != null) { Greenfoot.setWorld(new mainmenu()); }
-                    else {Greenfoot.setWorld(failWorld); } 
+                    player p = new player();
+                    p.setKey(true);
+                    Greenfoot.delay(80);
+                    unlockSFX.play(); 
+                    Greenfoot.delay(40);
+                    if (passWorld != null) { addObject(new inside_safe(),550,275); }
                     return;
                 }
-                key = "escape";
-            }
+          key = "escape";
+         }
         }
         if ("escape".equals(key))
             {
-                //Greenfoot.setWorld(new mainmenu());
-                if ("".equals(input) && failWorld != null) Greenfoot.setWorld(failWorld);
-                input = "";
-                update = true;
+               Greenfoot.setWorld(new Laboratory());
             }
         if ("backspace".equals(key) && input.length() > 0)
             {

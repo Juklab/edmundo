@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class checklist extends control_panel
+public class checklist extends gui
 {
     /**
      * Act - do whatever the checklist wants to do. This method is called whenever

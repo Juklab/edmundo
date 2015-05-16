@@ -2,8 +2,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import greenfoot.Actor;
 public class mainmenu extends World
 {
-music m = new music();
 FPS f = new FPS();
+music m = new music();
 public mainmenu()
     {    
         super(1100, 550, 1); 
@@ -19,27 +19,19 @@ public mainmenu()
         addObject(new juklab(), 325, 517);
         // load photo gallery
         addObject(new bg_animate(), 795, 340);
-        checkBGM();
         checkFPS();
     }
-
-public void act()
-{
-
+public void act() {
+    if(Mansion.BGOisPlaying() || Mainframe.BGSisPlaying() || Office.BGFisPlaying()) {
+        Mansion.stopBGO();
+        Mainframe.stopBGS();
+        Office.stopBGF();
+        m.startBGM();
+    }
 }
-private void checkBGM() {
- if(m.BGMstatus()) {
-     m.startBGM();
-  }
- else {
-     m.stopBGM() ; 
-  }
-}
-
 private void checkFPS() {
 if(f.FPS_curstatus()) {
      addObject(new FPS(), 60, 15); 
     }
-
 }
 }

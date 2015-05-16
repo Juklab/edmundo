@@ -1,17 +1,14 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ act()
-comment0.text=\ \r\n\ Checks\ for\ changes\ in\ direction\ and\ moves\ the\ main\ actor.\r\n
 comment1.params=
 comment1.target=void\ move()
-comment1.text=\r\n\ Moves\ the\ actor\ with\ appropriate\ image.\ \ Checks\ for\ obstacles\ and\ adjusts\r\n\ the\ position\ of\ the\ actor\ accordingly.\r\n
 comment2.params=
 comment2.target=void\ getDirection()
-comment2.text=\r\n\ Determines\ any\ changes\ in\ horizontal\ and\ vertical\ speeds\ for\ the\ actor.\r\n
 comment3.params=
-comment3.target=void\ shoot()
-comment4.params=
-comment4.target=boolean\ isLeft()
+comment3.target=boolean\ isLeft()
+comment4.params=a
+comment4.target=void\ setKey(boolean)
 comment5.params=
-comment5.target=void\ checkHitBot()
+comment5.target=boolean\ getKey()
 numComments=6
