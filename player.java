@@ -2,6 +2,7 @@ import greenfoot.*;
 import java.awt.Color;
 import java.awt.GraphicsEnvironment;
 import java.awt.Font;
+import java.util.List;
 
 public class player extends Actor
 {
@@ -54,7 +55,7 @@ else if(p.getPaused()==true)  {
        ySpeed = jSpeed; // add jump speed
     }
 }
- if(Greenfoot.isKeyDown("escape") && getWorld().getObjects(pause.class).isEmpty() || Greenfoot.isKeyDown("p") && getWorld().getObjects(pause.class).isEmpty()) 
+ if(Greenfoot.isKeyDown("escape") && getWorld().getObjects(pause.class).isEmpty() && getWorld().getObjects(wood_frame1.class).isEmpty() && getWorld().getObjects(wood_frame2.class).isEmpty() && getWorld().getObjects(labtop.class).isEmpty()  && getWorld().getObjects(inside_safe.class).isEmpty()  && getWorld().getObjects(note_show.class).isEmpty()  && getWorld().getObjects(paper_open.class).isEmpty() && getWorld().getObjects(insert.class).isEmpty() || Greenfoot.isKeyDown("p") && getWorld().getObjects(pause.class).isEmpty()) 
 {
         p.setPaused(true);
         //removeObjects(getObjects(null));
