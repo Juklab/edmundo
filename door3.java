@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class door3 extends gui
+public class door3 extends Actor
 {
     boolean mouseOver = false;
     GreenfootSound SFX = new GreenfootSound("sfx/knock.mp3"); 

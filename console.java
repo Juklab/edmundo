@@ -12,7 +12,7 @@ public console()
     addObject(new storyboard(),550,487);
     addObject(new inventory(),845,487);
     setBackground(BG);
-    setPaintOrder(next.class,fifth.class,fourth.class,third.class,second.class,first.class); // front to back
+    //setPaintOrder(next.class,fifth.class,fourth.class,third.class,second.class,first.class); // front to back
 }
 public void act()
     {    

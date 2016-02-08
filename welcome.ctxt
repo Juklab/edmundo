@@ -1,6 +1,7 @@
 #BlueJ class context
-comment0.params=
-comment0.target=welcome()
+comment0.target=welcome
 comment1.params=
-comment1.target=void\ act()
-numComments=2
+comment1.target=welcome()
+comment2.params=
+comment2.target=void\ act()
+numComments=3

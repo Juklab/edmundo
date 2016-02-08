@@ -1,4 +1,5 @@
 #BlueJ class context
-comment0.params=FileToRead
-comment0.target=java.lang.String[]\ Read(java.io.File)
-numComments=1
+comment0.target=FileRead
+comment1.params=FileToRead
+comment1.target=java.lang.String[]\ Read(java.io.File)
+numComments=2

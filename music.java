@@ -1,5 +1,5 @@
- import greenfoot.*;
-public class music extends gui
+import greenfoot.*;
+public class music extends Actor
 {
     public String filename;
     private boolean mouseOver = false;
@@ -7,7 +7,9 @@ public class music extends gui
     private static boolean BGMisPlay;
     private static int BGMvolume;
     public static GreenfootSound SFX = new GreenfootSound("sfx/button_hover.mp3");
-    public static GreenfootSound BGM = new GreenfootSound("bg/unbreakable.mp3");
+    public static GreenfootSound BGM = new GreenfootSound("bg/sohn.mp3");
+    
+    
     public void setImageON()
     {
         getWorld().addObject(new ON(), 585, 165);

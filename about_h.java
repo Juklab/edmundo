@@ -1,6 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-public class about_h extends gui
+public class about_h extends Actor
 {
     private boolean mouseOver = false;
     GreenfootSound SFX = new GreenfootSound("sfx/button_hover.mp3"); 

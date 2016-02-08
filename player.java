@@ -3,7 +3,10 @@ import java.awt.Color;
 import java.awt.GraphicsEnvironment;
 import java.awt.Font;
 import java.util.List;
-
+/**
+ * This is document
+ * <h1>Test header</h1>
+ */
 public class player extends Actor
 {
     final int jSpeed = 25; // the initial 'jump' speed
@@ -24,7 +27,7 @@ public class player extends Actor
     {     
     timer ++;    
     if(timer == 0)
-    setImage("characters/player/walking/1.gif");
+    setImage("characters/player/walking/1.gif"); //walking/2.gif
     if(timer == 5)
     setImage("characters/player/walking/2.gif");
     if(timer == 10)
@@ -48,14 +51,9 @@ public class player extends Actor
     move();
 }
 else if(p.getPaused()==true)  {
-    if (Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a")){ xSpeed=0; left = true; }// check left && xSpeed>-50
-    if (Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d")){ xSpeed=0; left = false;} // check right && xSpeed<50
-    if (Greenfoot.isKeyDown("up") || Greenfoot.isKeyDown("w") && onGround) // check jump
-    {
-       ySpeed = jSpeed; // add jump speed
-    }
+
 }
- if(Greenfoot.isKeyDown("escape") && getWorld().getObjects(pause.class).isEmpty() && getWorld().getObjects(wood_frame1.class).isEmpty() && getWorld().getObjects(wood_frame2.class).isEmpty() && getWorld().getObjects(labtop.class).isEmpty()  && getWorld().getObjects(inside_safe.class).isEmpty()  && getWorld().getObjects(note_show.class).isEmpty()  && getWorld().getObjects(paper_open.class).isEmpty() && getWorld().getObjects(insert.class).isEmpty() || Greenfoot.isKeyDown("p") && getWorld().getObjects(pause.class).isEmpty()) 
+ if(Greenfoot.isKeyDown("p") && getWorld().getObjects(pause.class).isEmpty() && getWorld().getObjects(wood_frame1.class).isEmpty() && getWorld().getObjects(wood_frame2.class).isEmpty() && getWorld().getObjects(labtop.class).isEmpty()  && getWorld().getObjects(inside_safe.class).isEmpty()  && getWorld().getObjects(note_show.class).isEmpty()  && getWorld().getObjects(paper_open.class).isEmpty() && getWorld().getObjects(insert.class).isEmpty() || Greenfoot.isKeyDown("p") && getWorld().getObjects(pause.class).isEmpty()) 
 {
         p.setPaused(true);
         //removeObjects(getObjects(null));
@@ -89,11 +87,6 @@ if(Greenfoot.isKeyDown("h") && getWorld().getObjects(control.class).isEmpty())
         p.setPaused(true);    
         getWorld().addObject(new control(),550,275);
 }
-if(Greenfoot.isKeyDown("t") && getWorld().getObjects(failed.class).isEmpty()) 
-{
-        getWorld().addObject(new failed(),getWorld().getWidth()/2, getWorld().getHeight()/2);
-        failedSFX.play();
-} 
 if (Greenfoot.mouseClicked(this))  
 {  
         PSFX.play();
@@ -143,16 +136,16 @@ private void move()
 
 private void getDirection()
     {
-//         if (!onGround) return; // if not mid-air changes allowed
-        // sets requested direction of move, or continues in current direction
+   //         if (!onGround) return; // if not mid-air changes allowed
+  // sets requested direction of move, or continues in current direction
    if (Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a")){ xSpeed-=1; left = true; }// check left && xSpeed>-50
    if (Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d")){ xSpeed+=1; left = false;} // check right && xSpeed<50
    if (Greenfoot.isKeyDown("up")  && onGround || Greenfoot.isKeyDown("w") && onGround || Greenfoot.isKeyDown("space") && onGround) // check jump
    {
             ySpeed -= jSpeed; // add jump speed
    }
-   if (Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("shift")){ xSpeed-=2; left = true; }// check left && xSpeed>-50
-   if (Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("shift")){ xSpeed+=2; left = false;} // check right && xSpeed<50
+   if (Greenfoot.isKeyDown("left") && Greenfoot.isKeyDown("shift")){ xSpeed-=3; left = true; }// check left && xSpeed>-50
+   if (Greenfoot.isKeyDown("right") && Greenfoot.isKeyDown("shift")){ xSpeed+=3; left = false;} // check right && xSpeed<50
     }
 
 public boolean isLeft() {

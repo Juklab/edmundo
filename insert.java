@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class insert extends gui
+public class insert extends Actor
 {
     pause p = new pause();
     player pa = new player();

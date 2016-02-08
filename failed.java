@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class failed extends gui
+public class failed extends Actor
 {
    boolean mouseOver = false;
     public void act()

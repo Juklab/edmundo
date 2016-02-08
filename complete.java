@@ -1,5 +1,5 @@
 import greenfoot.*;
-public class complete extends gui
+public class complete extends Actor
 {
     GreenfootSound winSFX = new GreenfootSound("sfx/shutdown.mp3");
     player p = new player();

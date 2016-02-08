@@ -12,8 +12,8 @@ public class welcome extends World
     {
         if(Greenfoot.isKeyDown("enter")) {
             //m.setSong("bg.mp3");
-            m.startBGM();
             m.setVolumeBGM(100);
+            m.startBGM();
             Greenfoot.setWorld(new mainmenu()); 
         }
         if(Greenfoot.isKeyDown("escape")) {

@@ -1,6 +1,7 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Laboratory()
+comment0.target=Laboratory
 comment1.params=
-comment1.target=void\ prepare()
-numComments=2
+comment1.target=Laboratory()
+comment2.params=
+comment2.target=void\ prepare()
+numComments=3

@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class no_key extends gui
+public class no_key extends Actor
 {
     pause p = new pause();
     public void act() 

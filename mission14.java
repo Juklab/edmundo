@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class mission14 extends gui
+public class mission14 extends Actor
 {
     private boolean mouseOver = false;
     GreenfootSound SFX = new GreenfootSound("sfx/button_hover.mp3");

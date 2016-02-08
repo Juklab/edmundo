@@ -1,10 +1,11 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Mainframe()
+comment0.target=Mainframe
 comment1.params=
-comment1.target=void\ prepare()
+comment1.target=Mainframe()
 comment2.params=
-comment2.target=boolean\ BGSisPlaying()
+comment2.target=void\ prepare()
 comment3.params=
-comment3.target=void\ stopBGS()
-numComments=4
+comment3.target=boolean\ BGSisPlaying()
+comment4.params=
+comment4.target=void\ stopBGS()
+numComments=5

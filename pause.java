@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class pause extends gui
+public class pause extends Actor
 {
 public static boolean paused;
 public pause()

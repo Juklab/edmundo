@@ -1,10 +1,11 @@
 #BlueJ class context
-comment0.params=
-comment0.target=pause()
+comment0.target=pause
 comment1.params=
-comment1.target=void\ act()
-comment2.params=x
-comment2.target=void\ setPaused(boolean)
-comment3.params=
-comment3.target=boolean\ getPaused()
-numComments=4
+comment1.target=pause()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=x
+comment3.target=void\ setPaused(boolean)
+comment4.params=
+comment4.target=boolean\ getPaused()
+numComments=5

@@ -1,5 +1,5 @@
 import greenfoot.*;
-public class save_change extends gui
+public class save_change extends Actor
 {
     private boolean mouseOver = false;
     GreenfootSound SFX = new GreenfootSound("sfx/button_hover.mp3");

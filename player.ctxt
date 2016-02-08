@@ -1,14 +1,16 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ act()
+comment0.target=player
+comment0.text=\r\n\ This\ is\ document\r\n\ <h1>Test\ header</h1>\r\n
 comment1.params=
-comment1.target=void\ move()
+comment1.target=void\ act()
 comment2.params=
-comment2.target=void\ getDirection()
+comment2.target=void\ move()
 comment3.params=
-comment3.target=boolean\ isLeft()
-comment4.params=a
-comment4.target=void\ setKey(boolean)
-comment5.params=
-comment5.target=boolean\ getKey()
-numComments=6
+comment3.target=void\ getDirection()
+comment4.params=
+comment4.target=boolean\ isLeft()
+comment5.params=a
+comment5.target=void\ setKey(boolean)
+comment6.params=
+comment6.target=boolean\ getKey()
+numComments=7

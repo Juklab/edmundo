@@ -1,5 +1,5 @@
 import greenfoot.*;
-public class reset extends gui
+public class reset extends Actor
 {
     private boolean mouseOver = false;
     GreenfootSound SFX = new GreenfootSound("sfx/button_hover.mp3");

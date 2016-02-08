@@ -1,9 +1,9 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import greenfoot.Actor;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo
 public class mainmenu extends World
 {
 FPS f = new FPS();
 music m = new music();
+CheckMem mem = new CheckMem();
 public mainmenu()
     {    
         super(1100, 550, 1); 
@@ -17,6 +17,7 @@ public mainmenu()
         addObject(new credit_h(), 207, 367);
         addObject(new option_h(), 267, 439);
         addObject(new juklab(), 325, 517);
+        mem.CheckMemory();
         // load photo gallery
         addObject(new bg_animate(), 795, 340);
         checkFPS();
@@ -30,7 +31,7 @@ public void act() {
     }
 }
 private void checkFPS() {
-if(f.FPS_curstatus()) {
+    if(f.FPS_curstatus()) {
      addObject(new FPS(), 60, 15); 
     }
 }

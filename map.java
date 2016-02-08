@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class map extends gui
+public class map extends Actor
 {
     public void act() {
     setLocation(550, 275);

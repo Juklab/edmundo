@@ -1,5 +1,5 @@
 import greenfoot.*;
-public class control extends gui
+public class control extends Actor
 {
     private boolean mouseOver = false;
     public void act()

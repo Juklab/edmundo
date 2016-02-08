@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class lift_server extends gui
+public class lift_server extends Actor
 {
     boolean mouseOver = false;
     GreenfootSound SFX = new GreenfootSound("sfx/lift_bell.mp3"); 

@@ -1,11 +1,13 @@
 import greenfoot.*;
+
 import java.util.List;
 import java.util.ArrayList;
 
 /**
- * SWorld is a super-class for a scrolling world (horizontal, vertical, or both).<br><br>
- * Author: danpost<br>Version: October 28, 2013 (v2.0)<br><br>
- * To implement this super-class:
+ * SWorld class is a super-class for a scrolling world (horizontal, vertical, scroll-width).<br><br>
+ * Author: Juk<br>Version: 2015<br><br>
+ * <h2 style="color: lime;">To implement this super-class:</h2>
+ * <img src="..\images\characters\player\troll_dancing.gif">
  * <l><li>(1) create a sub-class of this class</li>
  * <li>(2) use a <i>super(....)</i> call to one of the constructors in this class</li>
  * <li>(3) create the main actor (one that always stays in view) and call the <i>setMainActor</i> method</li>

@@ -1,6 +1,6 @@
 import greenfoot.*;
 
-public class passed extends gui
+public class passed extends Actor
 {
  GreenfootSound passSFX = new GreenfootSound("sfx/fanfare.mp3");
  pause p = new pause();

@@ -3,7 +3,7 @@
 import greenfoot.*;
 import java.awt.Color;
 import java.awt.Font;
-public class tick_box extends gui
+public class tick_box extends Actor
 {
     private int barWidth = 170; // the width of the color portion of the bar
     private int barHeight = 25; // the height of the color portion of the bar

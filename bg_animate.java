@@ -1,5 +1,5 @@
 import greenfoot.*;
-public class bg_animate extends gui
+public class bg_animate extends Actor
 {
     private   int     timer; // Variable for method to use when using timeter method.
     protected boolean pass;
@@ -16,7 +16,7 @@ public class bg_animate extends gui
     private String[] animated = {"gui/mainmenu/a.png","gui/mainmenu/b.png","gui/mainmenu/c.png","gui/mainmenu/d.png"};
     public void act() 
     {
-      imageChange(6,3,animated);
+      imageChange(7,5,animated);
     }    
     public void timeter(int time){
         pass = false;
@@ -41,7 +41,7 @@ public class bg_animate extends gui
         if(fadeInpass==true){
             if(pass==true){
                 getImage().setTransparency(getImage().getTransparency()+delay);
-                if(getImage().getTransparency()>=250){
+                if(getImage().getTransparency()>=200){
                     fadeInpass =false;    
                 }
             }
@@ -51,7 +51,7 @@ public class bg_animate extends gui
         timeter(timedelay);
         if(pass==true){
             getImage().setTransparency(getImage().getTransparency()-smooth);
-            if(getImage().getTransparency()<=10){
+            if(getImage().getTransparency()<=100){
                 getWorld().removeObject(this);    
             }
         }

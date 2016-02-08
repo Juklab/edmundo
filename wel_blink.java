@@ -1,5 +1,5 @@
 import greenfoot.*;
-public class wel_blink extends gui
+public class wel_blink extends Actor
 {
     private String[] blink = {"gui/welcome/1.png","gui/welcome/2.png"};
     private boolean timeFlow;

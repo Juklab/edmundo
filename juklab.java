@@ -2,7 +2,7 @@ import greenfoot.*;
 import java.awt.Desktop;
 import java.net.URL;
 import java.net.URI;
-public class juklab extends gui
+public class juklab extends Actor
 {
     private boolean mouseOver = false;
     GreenfootSound SFX = new GreenfootSound("sfx/button_hover.mp3"); 
@@ -29,7 +29,7 @@ public class juklab extends gui
         SFX2.play();
         try 
         {
-            Desktop.getDesktop().browse(new URL("https://github.com/Juklab/edmundo").toURI());
+            Desktop.getDesktop().browse(new URL("https://github.com/Juklabs").toURI());
         }           
         catch (Exception e) {
             e.printStackTrace();
