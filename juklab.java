@@ -29,6 +29,7 @@ public class juklab extends Actor
         SFX2.play();
         try 
         {
+            //Open URL in default browser
             Desktop.getDesktop().browse(new URL("https://github.com/Juklabs").toURI());
         }           
         catch (Exception e) {
