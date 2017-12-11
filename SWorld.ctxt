@@ -1,14 +1,14 @@
 #BlueJ class context
 comment0.target=SWorld
-comment0.text=\r\n\ SWorld\ class\ is\ a\ super-class\ for\ a\ scrolling\ world\ (horizontal,\ vertical,\ scroll-width).<br><br>\r\n\ Author\:\ Juk<br>Version\:\ 2015<br><br>\r\n\ <h2\ style\="color\:\ lime;">To\ implement\ this\ super-class\:</h2>\r\n\ <img\ src\="..\\images\\characters\\player\\troll_dancing.gif">\r\n\ <l><li>(1)\ create\ a\ sub-class\ of\ this\ class</li>\r\n\ <li>(2)\ use\ a\ <i>super(....)</i>\ call\ to\ one\ of\ the\ constructors\ in\ this\ class</li>\r\n\ <li>(3)\ create\ the\ main\ actor\ (one\ that\ always\ stays\ in\ view)\ and\ call\ the\ <i>setMainActor</i>\ method</li>\r\n\ <li>(4)\ (optional)\ set\ a\ scrolling\ background\ image\ using\ a\ call\ to\ <i>setScrollingBackground</i>\ or\ <i>fillScrollingBackground</i></li></l><br>\r\n\ NOTE\:\ the\ order\ of\ steps\ above\ is\ very\ important<br><br>\r\n\ There\ are\ two\ methods\ to\ add\ other\ objects\ into\ the\ world\:\r\n\ <l><li>the\ standard\ method\ <i>addObject(Actor,\ int,\ int)</i>\ can\ be\ used\ to\ add\ a\ scrollable\ actor\ into\ the\ world</li>\r\n\ <li>a\ secondary\ method\ <i>addObject(Actor,\ int,\ int,\ boolean)</i>\ which\ is\ equivalent\ to\ the\ standard\ method,\ except\r\n\ that\ the\ boolean\ will\ indicate\ the\ scrollable\ state\ of\ the\ object.\ \ When\ adding\ scrolling\ objects\ into\ the\ world,\r\n\ use\ scrolling\ coordinates;\ when\ adding\ non-scrolling\ objects,\ use\ world\ coordinates.</li></l>\r\n\r\n\ SPECIAL\ NOTE\:\ if\ you\ decide\ to\ override\ the\ 'act'\ method\ of\ this\ class\ with\ an\ 'act'\ method\ in\ your\ sub-world,\ you\ will\r\n\ need\ to\ follow\ the\ format\ below\ to\ run\ the\ scrolling\ of\ the\ scenario\:\r\n\ \r\n\ <pre>\ \ \ \ \ \ \ \ public\ void\ act()\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ //\ possibly\ some\ code\ here\ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ super.act();\r\n\ \ \ \ \ \ \ \ \ \ \ \ //\ possibly\ some\ more\ code\ here\r\n\ \ \ \ \ \ \ \ }<pre>\r\n
+comment0.text=\n\ SWorld\ class\ is\ a\ super-class\ for\ a\ scrolling\ world\ (horizontal,\ vertical,\ scroll-width).<br><br>\n\ Author\:\ Juk<br>Version\:\ 2015<br><br>\n\ <h2\ style\="color\:\ lime;">To\ implement\ this\ super-class\:</h2>\n\ <img\ src\="..\\images\\characters\\player\\troll_dancing.gif">\n\ <l><li>(1)\ create\ a\ sub-class\ of\ this\ class</li>\n\ <li>(2)\ use\ a\ <i>super(....)</i>\ call\ to\ one\ of\ the\ constructors\ in\ this\ class</li>\n\ <li>(3)\ create\ the\ main\ actor\ (one\ that\ always\ stays\ in\ view)\ and\ call\ the\ <i>setMainActor</i>\ method</li>\n\ <li>(4)\ (optional)\ set\ a\ scrolling\ background\ image\ using\ a\ call\ to\ <i>setScrollingBackground</i>\ or\ <i>fillScrollingBackground</i></li></l><br>\n\ NOTE\:\ the\ order\ of\ steps\ above\ is\ very\ important<br><br>\n\ There\ are\ two\ methods\ to\ add\ other\ objects\ into\ the\ world\:\n\ <l><li>the\ standard\ method\ <i>addObject(Actor,\ int,\ int)</i>\ can\ be\ used\ to\ add\ a\ scrollable\ actor\ into\ the\ world</li>\n\ <li>a\ secondary\ method\ <i>addObject(Actor,\ int,\ int,\ boolean)</i>\ which\ is\ equivalent\ to\ the\ standard\ method,\ except\n\ that\ the\ boolean\ will\ indicate\ the\ scrollable\ state\ of\ the\ object.\ \ When\ adding\ scrolling\ objects\ into\ the\ world,\n\ use\ scrolling\ coordinates;\ when\ adding\ non-scrolling\ objects,\ use\ world\ coordinates.</li></l>\n\n\ SPECIAL\ NOTE\:\ if\ you\ decide\ to\ override\ the\ 'act'\ method\ of\ this\ class\ with\ an\ 'act'\ method\ in\ your\ sub-world,\ you\ will\n\ need\ to\ follow\ the\ format\ below\ to\ run\ the\ scrolling\ of\ the\ scenario\:\n\ \n\ <pre>\ \ \ \ \ \ \ \ public\ void\ act()\n\ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ //\ possibly\ some\ code\ here\ \ \ \ \ \ \n\ \ \ \ \ \ \ \ \ \ \ \ super.act();\n\ \ \ \ \ \ \ \ \ \ \ \ //\ possibly\ some\ more\ code\ here\n\ \ \ \ \ \ \ \ }<pre>\n
 comment1.params=wide\ high\ cellSize\ scrollWide\ scrollHigh
 comment1.target=SWorld(int,\ int,\ int,\ int,\ int)
 comment10.params=
 comment10.target=void\ act()
-comment10.text=\r\n\ Runs\ the\ scrolling.\r\n
+comment10.text=\n\ Runs\ the\ scrolling.\n
 comment11.params=
 comment11.target=void\ scrollBackground()
-comment11.text=\r\n\ Scrolls\ the\ background\ image.\r\n
+comment11.text=\n\ Scrolls\ the\ background\ image.\n
 comment12.params=
 comment12.target=void\ scrollObjects()
 comment13.params=worldX
@@ -33,8 +33,8 @@ comment7.params=obj\ xLoc\ yLoc
 comment7.target=void\ addObject(greenfoot.Actor,\ int,\ int)
 comment8.params=obj
 comment8.target=void\ removeObject(greenfoot.Actor)
-comment8.text=\r\n\ Removes\ an\ object\ from\ the\ world,\ re-defining\ fields\ as\ neccessary\r\n\r\n\ @param\ obj\ the\ object\ to\ be\ removed\ from\ the\ world\r\n
+comment8.text=\n\ Removes\ an\ object\ from\ the\ world,\ re-defining\ fields\ as\ neccessary\n\n\ @param\ obj\ the\ object\ to\ be\ removed\ from\ the\ world\n
 comment9.params=objs
 comment9.target=void\ removeObjects(java.util.List)
-comment9.text=\r\n\ Removes\ a\ collection\ of\ objects\ from\ the\ world,\ calling\ <i>removeObject(Actor)</i>\ for\ each\ one\ in\ the\ list\r\n\r\n\ @param\ objs\ the\ collection\ or\ list\ of\ objects\ to\ be\ removed\ from\ the\ world\r\n
+comment9.text=\n\ Removes\ a\ collection\ of\ objects\ from\ the\ world,\ calling\ <i>removeObject(Actor)</i>\ for\ each\ one\ in\ the\ list\n\n\ @param\ objs\ the\ collection\ or\ list\ of\ objects\ to\ be\ removed\ from\ the\ world\n
 numComments=17

@@ -1,6 +1,5 @@
 import greenfoot.*;
 import greenfoot.World;
-import java.awt.Color;
 import java.io.*;
 import java.util.*;
 public class options extends mainmenu 
@@ -64,7 +63,7 @@ public class options extends mainmenu
     {
         // prepare the mouse adjustable bar and add it to the world
         BGMbar.setBreakPercent(0);
-        BGMbar.setSafeColor(Color.white);
+        BGMbar.setSafeColor(Color.WHITE);
         music_bar BGMbar = new music_bar("Volume", "%", BGMvolume, 100);
         addObject(BGMbar, 395, 165);
     }   

@@ -1,5 +1,5 @@
 import greenfoot.*;
-import java.awt.Color;
+
 public class fps_box extends tick_box
 {
     private boolean changed = false;

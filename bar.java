@@ -1,8 +1,8 @@
 // Bar class for use as a health bar or progress bar as well as for other types of measurements for visual of value in a bar form.
 // DO NOT EDIT THIS CLASS as everything can be controlled through method calls
 import greenfoot.*;
-import java.awt.Color;
-import java.awt.Font;
+
+
 public class bar extends Actor
 {
     private int barWidth = 170; // the width of the color portion of the bar

@@ -1,5 +1,4 @@
 import greenfoot.*;
-import java.awt.Color;
 /**
  * This class helps to handle with Images
  * 
@@ -17,7 +16,7 @@ public class Picture
     {
         GreenfootImage i2 = new GreenfootImage(i);
         i=new GreenfootImage(i2);
-        i.setColor(Col);
+        i.setColor(Color.WHITE);
         i.fill();
         for(int x=0; x<i.getWidth(); x++)
             for(int y=0;y<i.getHeight();y++)
@@ -139,11 +138,11 @@ public class Picture
     public static int[] getSizeForTextInField(String []Text,int BoardPartSize,int TextSize)
     {
         GreenfootImage[] i = new GreenfootImage[Text.length]; 
-        i[0] = new GreenfootImage(Text[0],TextSize,Color.black,new Color(0,0,0,0));
+        i[0] = new GreenfootImage(Text[0],TextSize,Color.BLACK, new Color(0,0,0,0));
         int w = i[0].getWidth();
         for(int a=1;a<i.length;a++)
         {
-            i[a] = new GreenfootImage(Text[a]+"",TextSize,Color.black,new Color(0,0,0,0));
+            i[a] = new GreenfootImage(Text[a]+"",TextSize,Color.BLACK,new Color(0,0,0,0));
             int w2=i[a].getWidth();
             if(w2>w)
                 w=w2;
@@ -168,7 +167,7 @@ public class Picture
 
     public static GreenfootImage getTextInField(GreenfootImage BoardParts,int BoardPartSize,String []Text,int TextSize)
     {
-        return getTextInField(BoardParts,BoardPartSize,Text,TextSize,Color.black);
+        return getTextInField(BoardParts,BoardPartSize,Text,TextSize,Color.BLACK);
     }
 
     public static GreenfootImage getTextInField(String BoardParts,int BoardPartSize,String []Text,int TextSize,Color StringColor)
@@ -353,11 +352,11 @@ public class Picture
         if(width<1 || height<3)
             return null;
         GreenfootImage Flag= new GreenfootImage(width,height);
-        Flag.setColor(Color.black);
+        Flag.setColor(Color.BLACK);
         Flag.fillRect(0,0,width,height/3);
-        Flag.setColor(Color.red);
+        Flag.setColor(Color.RED);
         Flag.fillRect(0,height/3,width,height/3);
-        Flag.setColor(Color.yellow);
+        Flag.setColor(Color.YELLOW);
         Flag.fillRect(0,height/3*2,width,height/3);
         return Flag;
     }
@@ -367,9 +366,9 @@ public class Picture
         if(width<5 || height<5)
             return null;
         GreenfootImage Flag= new GreenfootImage(width,height);
-        Flag.setColor(Color.blue);
+        Flag.setColor(Color.BLUE);
         Flag.fill();
-        Flag.setColor(Color.white);
+        Flag.setColor(Color.WHITE);
         int h=-(width+height)/18;
         while(h<=(width+height)/18)
         {
@@ -377,7 +376,7 @@ public class Picture
             Flag.drawLine(h,height,width+h,0);
             h++;
         }
-        Flag.setColor(Color.red);
+        Flag.setColor(Color.RED);
         h=-(width+height)/45;
         while(h<=(width+height)/45)
         {
@@ -385,7 +384,7 @@ public class Picture
             Flag.drawLine(h,height,width+h,0);
             h++;
         }
-        Flag.setColor(Color.white);
+        Flag.setColor(Color.WHITE);
         h=-(int)(0.5+(6.0/75.0)*height);
         while(h<=(int)(0.5+(6.0/75.0)*height))
         {
@@ -398,7 +397,7 @@ public class Picture
             Flag.drawLine(width/2-h,0,width/2-h,height);
             h++;
         }
-        Flag.setColor(Color.red);
+        Flag.setColor(Color.RED);
         h=-(int)(0.5+(7.0/150.0)*height);
         while(h<=(int)(0.5+(7.0/150.0)*height))
         {
@@ -470,7 +469,7 @@ public class Picture
 
     public static GreenfootImage BlackText(String s, int size)
     {
-        return new GreenfootImage(s,size,Color.black,new Color(0,0,0,0));
+        return new GreenfootImage(s,size,Color.BLACK,new Color(0,0,0,0));
     }
 
     public static GreenfootImage BlackText(int s, int size)

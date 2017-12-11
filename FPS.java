@@ -1,11 +1,10 @@
 import greenfoot.*; // (World, Actor, GreenfootImage, and Greenfoot)
-import java.awt.Color;
-import java.awt.Graphics;
+
 public class FPS extends Actor
 {
 public enum Mode {AVERAGE, REALTIME}
 public static final Mode mode = Mode.AVERAGE;
-private static final Color textColor = Color.white;
+private static final Color textColor = Color.WHITE;
 private static final String prefix = "FPS: ";
 private static final int updateFreq = 30;
 private static boolean status;

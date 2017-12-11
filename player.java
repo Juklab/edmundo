@@ -1,7 +1,7 @@
 import greenfoot.*;
-import java.awt.Color;
+
 import java.awt.GraphicsEnvironment;
-import java.awt.Font;
+
 import java.util.List;
 /**
  * This is document

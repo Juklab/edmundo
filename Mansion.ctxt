@@ -2,7 +2,7 @@
 comment0.target=Mansion
 comment1.params=
 comment1.target=Mansion()
-comment1.text=\r\n\ Creates\ a\ scrolling\ world\ using\ a\ main\ actor,\ a\ background,\ some\ obstacles,\ and\ a\ non-scrolling\ score.\r\n
+comment1.text=\n\ Creates\ a\ scrolling\ world\ using\ a\ main\ actor,\ a\ background,\ some\ obstacles,\ and\ a\ non-scrolling\ score.\n
 comment2.params=
 comment2.target=void\ prepare()
 comment3.params=

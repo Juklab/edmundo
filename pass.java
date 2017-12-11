@@ -1,9 +1,8 @@
 import greenfoot.*;
-import java.awt.Color;
-
 public class pass extends World
 {
     private static int MAX_WORD_LEN = 4;
+    private static final Color transparent = new Color( 0 , 0 , 0 , 0);
     private World passWorld, failWorld;
     private String description = "", answer, input= "";
     private int attempts = 3;
@@ -86,18 +85,18 @@ public class pass extends World
     private void updateBackground()
     {
         GreenfootImage bg = getBackground();
-        bg.setColor(Color.black);
+        bg.setColor(Color.BLACK);
         bg.fill();
-        bg.setColor(Color.white);
+        bg.setColor(Color.WHITE);
         bg.fillRect(10, 10, getWidth()-20, getHeight()-20);
-        bg.setColor(Color.black);
-        GreenfootImage text = new GreenfootImage("Security Protected", 60, Color.black, null);
+        bg.setColor(Color.BLACK);
+        GreenfootImage text = new GreenfootImage("Security Protected", 60, Color.BLACK, transparent);
         bg.drawImage(text, (getWidth()-text.getWidth())/2, 40);
-        text = new GreenfootImage(description, 28, new Color(128, 0, 0), null);
+        text = new GreenfootImage(description, 28, new Color(128, 0, 0), transparent);
         bg.drawImage(text, (getWidth()-text.getWidth())/2, 100);
-        text = new GreenfootImage("Enter Passcode", 40, Color.black, null);
+        text = new GreenfootImage("Enter Passcode", 40, Color.BLACK, transparent);
         bg.drawImage(text, (getWidth()-text.getWidth())/2, 200);
-        text = new GreenfootImage("*", 36, Color.black, null);
+        text = new GreenfootImage("*", 36, Color.BLACK, transparent);
         for (int i=0; i<input.length(); i++) bg.drawImage(text, getWidth()/2-MAX_WORD_LEN*10+i*20, 280);
     }
 
@@ -116,7 +115,7 @@ public class pass extends World
                 if (!answer.equals(input))
                 {
                     SFX_notpass.play(); 
-                    GreenfootImage text = new GreenfootImage("Access Denied", 36, Color.red, null);
+                    GreenfootImage text = new GreenfootImage("Access Denied", 36, Color.RED, transparent);
                     getBackground().drawImage(text, (getWidth()-text.getWidth())/2, 350);
                     Greenfoot.delay(50);
                     attempts--;
@@ -139,7 +138,7 @@ public class pass extends World
                 else  // if passed !!
                 {
                     SFX_pass.play(); 
-                    GreenfootImage text = new GreenfootImage("Access Granted", 36, new Color(0, 128, 0), null);
+                    GreenfootImage text = new GreenfootImage("Access Granted", 36, new Color(0, 128, 0), transparent);
                     getBackground().drawImage(text, (getWidth()-text.getWidth())/2, 350);
                     player p = new player();
                     p.setKey(true);

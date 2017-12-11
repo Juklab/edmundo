@@ -1,5 +1,5 @@
 import greenfoot.*;
-import java.awt.Color;
+
 
 public class music_bar extends bar
 {

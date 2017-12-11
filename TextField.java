@@ -1,10 +1,8 @@
 import greenfoot.*;
-import java.awt.Color;
 public class TextField extends Actor
 {
     private String[] Text;
     private int Scroll=0;
-
     public TextField()
     {
         Text = new String[]{
@@ -106,10 +104,10 @@ public class TextField extends Actor
 
     public void UpdateImage()
     {
-        GreenfootImage i1,i2,i3 = Picture.getTextWithMaxWidth(Text[0],500,30,Color.black,Color.white);
+        GreenfootImage i1,i2,i3 = Picture.getTextWithMaxWidth(Text[0],500,30,Color.BLACK,Color.WHITE);
         for(int i=1; i<Text.length; i++)
         {
-            i2 = Picture.getTextWithMaxWidth(Text[i],500,30,Color.black,Color.white);
+            i2 = Picture.getTextWithMaxWidth(Text[i],500,30,Color.BLACK,Color.WHITE);
             i1 = new GreenfootImage(598,i2.getHeight()+i3.getHeight());
             i1.drawImage(i3,0,0);
             i1.drawImage(i2,0,i3.getHeight());
