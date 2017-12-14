@@ -7,9 +7,8 @@ public class music extends Actor
     private static boolean BGMisPlay;
     private static int BGMvolume;
     public static GreenfootSound SFX = new GreenfootSound("sfx/button_hover.mp3");
-    public static GreenfootSound BGM = new GreenfootSound("bg/sohn.mp3");
-    
-    
+    public static GreenfootSound BGM = new GreenfootSound("bg/welcome_mission.mp3");
+   
     public void setImageON()
     {
         getWorld().addObject(new ON(), 585, 165);

@@ -30,7 +30,7 @@ public class juklab extends Actor
         try 
         {
             //Open URL in default browser
-            Desktop.getDesktop().browse(new URL("https://github.com/Juklabs").toURI());
+            Desktop.getDesktop().browse(new URL("https://juk.life").toURI());
         }           
         catch (Exception e) {
             e.printStackTrace();
